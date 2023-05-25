@@ -63,8 +63,27 @@ public class Contact {
 	     driver.findElement(By.id("Contacts_editView_fieldName_fax")).sendKeys("ABCHB25");
 	     driver.findElement(By.id("Contacts_editView_fieldName_email")).sendKeys("ramindustries@123.gmail.com");
 	     WebElement dob = driver.findElement(By.id("Contacts_editView_fieldName_birthday"));
-	     dob.sendKeys("20-10-1996");
+	     dob.sendKeys("20-10-1999");
 	     dob.sendKeys(Keys.ENTER);
+	     driver.findElement(By.id("Contacts_editView_fieldName_contact_id_create")).click();
+	     driver.findElement(By.id("s2id_autogen11")).click();
+	     WebElement hell = driver.findElement(By.id("s2id_autogen12_search"));
+	     Thread.sleep(2000);
+	     hell.sendKeys("Mr.");
+	     hell.sendKeys(Keys.ENTER);
+	     driver.findElement(By.xpath("(//input[@id='Contacts_editView_fieldName_firstname'])[2]")).sendKeys("raghu");
+	     driver.findElement(By.xpath("(//input[@id='Contacts_editView_fieldName_lastname'])[2]")).sendKeys("mirajgaonkar");
+	     driver.findElement(By.xpath("(//input[@id='Contacts_editView_fieldName_phone'])[2]")).sendKeys("563265562365");
+	     driver.findElement(By.xpath("(//input[@id='Contacts_editView_fieldName_email'])[2]")).sendKeys("mirajgaonkar@gmail.com");
+	     driver.findElement(By.id("s2id_autogen13")).click();
+	     WebElement drop = driver.findElement(By.xpath("(//input[@role='combobox'])[5]"));
+	     Thread.sleep(2000);
+	     drop.sendKeys("Atlas Jeniffer");
+	     drop.sendKeys(Keys.ENTER);
+	     WebElement save = driver.findElement(By.xpath("//button[@name='saveButton']"));
+	     save.sendKeys(Keys.ENTER);
+	     
+	    
 	     driver.findElement(By.id("Contacts_editView_fieldName_assistant")).sendKeys("raghu");
 	     driver.findElement(By.id("contact_id_display")).sendKeys("CEO");
 	     driver.findElement(By.id("Contacts_editView_fieldName_assistantphone")).sendKeys("123456789");

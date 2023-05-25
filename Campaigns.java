@@ -39,6 +39,23 @@ public class Campaigns {
 		    WebElement type = driver.findElement(By.id("s2id_autogen6_search"));
 		    type.sendKeys("Advertisement");
 		    type.sendKeys(Keys.ENTER);
+		    driver.findElement(By.xpath("//span[@class='input-group-addon createReferenceRecord cursorPointer clearfix']")).click();
+		    driver.findElement(By.id("Products_editView_fieldName_productname")).sendKeys("rahul");
+		    driver.findElement(By.id("Products-editview-fieldname-unit_price")).sendKeys("786543456");
+		    driver.findElement(By.id("tax1_check")).click();
+		    driver.findElement(By.id("tax2_check")).click();
+		    driver.findElement(By.id("tax3_check")).click();
+		    driver.findElement(By.id("Products_editView_fieldName_qtyinstock")).sendKeys("10");
+		    driver.findElement(By.id("s2id_autogen124")).click();
+		    WebElement dd = driver.findElement(By.id("s2id_autogen125_search"));
+		    Thread.sleep(2000);
+		    dd.sendKeys("Atlas Jeniffer");
+		    dd.sendKeys(Keys.ENTER);
+		    WebElement el = driver.findElement(By.xpath("//button[@name='saveButton']"));
+		    el.sendKeys(Keys.ENTER);
+
+		    
+		    
 		    driver.findElement(By.id("product_id_display")).sendKeys("ABCD");
 		    driver.findElement(By.id("Campaigns_editView_fieldName_targetaudience")).sendKeys("ABCD");
 		    Thread.sleep(2000);

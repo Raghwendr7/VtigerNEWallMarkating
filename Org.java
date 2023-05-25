@@ -34,6 +34,16 @@ public class Org {
 	    driver.findElement(By.id("account_id_display")).sendKeys("ABCD");
 	    driver.findElement(By.id("Accounts_editView_fieldName_otherphone")).sendKeys("8007535491");
 	    driver.findElement(By.id("Accounts_editView_fieldName_employees")).sendKeys("10");
+	    driver.findElement(By.id("Accounts_editView_fieldName_account_id_create")).click();
+	     driver.findElement(By.xpath("(//input[@name='accountname'])[2]")).sendKeys("raghu");
+	     driver.findElement(By.xpath("(//input[@name='website'])[2]")).sendKeys("https://wwww.raghu.com");
+	     driver.findElement(By.xpath("(//input[@name='phone'])[2]")).sendKeys("69327832789");
+	     WebElement framedp1 = driver.findElement(By.xpath("(//a[@class='select2-choice'])[5]"));
+	     framedp1.sendKeys("Atlas Jeniffer");
+	     framedp1.sendKeys(Keys.ENTER);
+	     Thread.sleep(2000);
+	     driver.findElement(By.xpath("//button[@class='btn btn-success']")).click();
+	     
 	    driver.findElement(By.id("Accounts_editView_fieldName_email1")).sendKeys("raghu@gmail.com");
 	    driver.findElement(By.id("Accounts_editView_fieldName_email2")).sendKeys("raghu@gmail.com");
 	    driver.findElement(By.id("Accounts_editView_fieldName_ownership")).sendKeys("Qspider");
@@ -59,9 +69,9 @@ public class Org {
 	    Thread.sleep(2000);  
 	    JavascriptExecutor jse =(JavascriptExecutor)driver;
 	    jse.executeScript("window.scrollBy(0,500)");
-//	    Thread.sleep(2000);
-//	    driver.findElement(By.id("Accounts_editView_fieldName_notify_owner")).click();
-//	    Thread.sleep(2000);
+	    Thread.sleep(2000);
+	    driver.findElement(By.id("Accounts_editView_fieldName_notify_owner")).click();
+	    Thread.sleep(2000);
 	    driver.findElement(By.name("bill_street")).sendKeys("jm rd chinchwad");
 	    
 	    
